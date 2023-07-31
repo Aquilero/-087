@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+Ü087 - Einführung React 
+Martin | 31.07.2023 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Aufgabe 1
 
-In the project directory, you can run:
+Gegeben ist die im Anhang aufgeführte HTML Seite (HTML+CSS). Die Aufgabe besteht darin, die HTML-Struktur in separate React Komponenten zu übertragen und sie miteinander zu verknüpfen. 
 
-### `npm start`
+Hinweis: Da React bereits eine standard index.html mitliefert, müssen nicht alle Teile des HTML Codes überführt werden! 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Beispielhaftes Vorgehen: 
+Erstelle eine neue React App mit dem Befehl npx create-react-app html-components.
+Erstelle eine neue .js-Datei im src Verzeichnis.
+Erstelle in der neuen .js-Datei die Komponenten zu den einzelnen HTML-Abschnitten.
+Vergiss nicht, das Styling zu übernehmen und im HTML-Code den Platzhalter HIER_NAME_EINFÜGEN zu ersetzen.
+Lösche ggfs. die App.* Dateien und die entsprechenden Referenzen dazu aus der Datei index.js.
+Binde die neu erstellten Komponenten in die index.js Datei ein, sodass diese gerendert werden. 
+Öffne die Webseite im Browser und mache einen Screenshot für die Abgabe.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aufgabe 2
 
-### `npm run build`
+Füge der Webseite von Aufgabe 1 dynamische Komponenten hinzu und platziere sie sinnvoll auf der Webseite. Mache erneut einen Screenshot für die Abgabe. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Erstelle einen Counter, welcher über einen Button erhöht werden kann. Jedes Mal, wenn der Button geklickt wird, soll sich der Zähler um 2 erhöhen. 
+Erstelle ein Uhrzeit-Widget, welches die aktuelle Uhrzeit im Format HH:MM:SS wiedergibt. Die Anzeige soll sich jede Sekunde aktualisieren. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Anhang - Code
 
-### `npm run eject`
+index.html
+<!DOCTYPE html>
+<html lang="en">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ü087-Webseite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<body>
+  <header>
+	<h1>HIER_NAME_EINFÜGEN's React Komponenten</h1>
+  </header>
+  <main>
+	<section>
+  	<h2>Willkommen</h2>
+  	<p>Herzlich willkommen auf meiner einfachen Webseite!</p>
+	</section>
+	<section>
+  	<h2>Über mich</h2>
+  	<p>
+    	Hier ist eine kurze Beschreibung über mich und meine Interessen.
+  	</p>
+	</section>
+	<section>
+  	<h2>Kontakt</h2>
+  	<p>
+    	Bei Fragen oder Anregungen können Sie mich gerne kontaktieren:
+    	kontakt@meinewebseite.de
+  	</p>
+	</section>
+  </main>
+  <footer>
+	<p>&copy; 2023 Meine Webseite</p>
+  </footer>
+</body>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+</html>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+style.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
 
-### Code Splitting
+header h1 {
+  margin: 0;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+main {
+  padding: 2rem;
+}
 
-### Analyzing the Bundle Size
+section {
+  margin-bottom: 2rem;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+h2 {
+  color: #333;
+}
 
-### Making a Progressive Web App
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
